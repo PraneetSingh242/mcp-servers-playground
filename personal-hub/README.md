@@ -26,3 +26,18 @@ Server URL: http://localhost:8000/mcp
   "args": ["mcp-remote", "http://localhost:8000/mcp"]
 }
 ```
+
+## Where the data is stored
+
+The server picks the database location at startup (see `resolve_db_path()` in `main.py`):
+
+1. `HUB_DB_PATH` environment variable, if set. Use this to point at a persistent disk.
+2. `hub.db` next to `main.py`, if it can be written (normal local run).
+3. Otherwise the system temp folder (`/tmp/personal_hub/hub.db` on Linux). This keeps a
+   read-only cloud deploy working instead of failing with "attempt to write a readonly
+   database", but **that data is temporary**: it is lost on every restart or redeploy.
+
+`GET /health` and the `hub://today` resource show which location is in use and whether it is temporary.
+
+For data that survives redeploys on a cloud host, use a hosted database (for example Turso/libSQL
+or Supabase Postgres, both have free tiers) instead of a local SQLite file.
