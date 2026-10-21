@@ -1,0 +1,17 @@
+{
+  "food": ["groceries", "dining_out", "snacks", "delivery"],
+  "transport": ["fuel", "cab", "metro_bus", "train", "flight"],
+  "housing": ["rent", "electricity", "water", "internet", "maintenance"],
+  "health": ["medicine", "doctor", "gym", "insurance"],
+  "shopping": ["clothes", "electronics", "household"],
+  "entertainment": ["movies", "subscriptions", "outing"],
+  "education": ["courses", "books", "certifications"],
+  "bills": ["mobile", "credit_card", "emi"],
+  "travel": ["hotel", "sightseeing"],
+  "investments": ["sip", "stocks", "fd_rd", "ppf_nps", "gold"],
+  "personal_care": ["salon", "grooming", "cosmetics"],
+  "family": ["parents", "kids", "home_help"],
+  "gifts_donations": ["gifts", "charity", "festival"],
+  "work": ["office_lunch", "commute", "tools_software"],
+  "other": []
+}

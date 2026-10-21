@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+
+# Virtual environments
+.venv/
+venv/
+
+# Local databases (personal data, never commit)
+*.db
+*.sqlite
+*.sqlite3
+*.db-journal
+
+# Secrets
+.env
+.env.*
+*.pem
+*.key
+
+# Editors / OS / tools
+.vscode/
+.idea/
+.claude/
+.DS_Store
+Thumbs.db
